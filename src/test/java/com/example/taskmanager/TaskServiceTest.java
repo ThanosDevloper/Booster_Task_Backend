@@ -17,7 +17,6 @@ class TaskServiceTest {
 
     @BeforeEach
     void setUp() {
-        // TaskService constructor creates 4 sample tasks
         taskService = new TaskService();
     }
 
@@ -45,8 +44,6 @@ class TaskServiceTest {
 
     @Test
     void testUpdateTaskStatus() {
-        // Default first task is completed, second is completed, third is pending
-        // Let's create a new task and update its status
         Task task = new Task();
         task.setName("Task to Update");
         Task created = taskService.createTask(task);
@@ -69,7 +66,6 @@ class TaskServiceTest {
         assertTrue(deleted);
         assertEquals(initialSize - 1, taskService.getAllTasks().size());
 
-        // Delete non-existent task
         boolean deletedAgain = taskService.deleteTask(999L);
         assertFalse(deletedAgain);
     }

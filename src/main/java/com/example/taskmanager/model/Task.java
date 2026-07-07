@@ -15,7 +15,7 @@ public class Task {
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    // Constructors
+
     public Task() {
     }
 
@@ -27,7 +27,7 @@ public class Task {
         this.createdAt = createdAt;
     }
 
-    // Getters and Setters
+
     public Long getId() {
         return id;
     }

@@ -17,7 +17,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/tasks")
-@CrossOrigin(origins = "*") // Allows request from any origin, including Angular's local server
+@CrossOrigin(origins = "*")
 public class TaskController {
 
     private final TaskService taskService;
@@ -56,7 +56,7 @@ public class TaskController {
         }
     }
 
-    // Handles validation errors and returns them in a structured JSON format
+
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {
@@ -69,7 +69,7 @@ public class TaskController {
         return errors;
     }
 
-    // DTO for status update
+
     public static class StatusUpdateDto {
         @NotNull(message = "Status is required")
         private TaskStatus status;

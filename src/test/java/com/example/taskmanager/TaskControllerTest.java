@@ -48,7 +48,7 @@ class TaskControllerTest {
 
     @Test
     void testCreateTask_ValidationError() throws Exception {
-        Task task = new Task(); // Missing name
+        Task task = new Task();
         task.setDescription("This task has no name");
 
         mockMvc.perform(post("/api/tasks")

@@ -16,7 +16,6 @@ public class TaskService {
     private final AtomicLong idGenerator = new AtomicLong(1);
 
     public TaskService() {
-        // Initialize with a few sample tasks
         createTask(new Task(null, "Configure Angular Project", "Set up standard Angular skeleton and configure routing", TaskStatus.COMPLETED, LocalDateTime.now().minusDays(2)));
         createTask(new Task(null, "Implement REST APIs", "Develop Spring Boot CRUD endpoints with validation and error handling", TaskStatus.COMPLETED, LocalDateTime.now().minusDays(1)));
         createTask(new Task(null, "Design Beautiful Frontend UI", "Build responsive design with modern dashboard statistics and validation", TaskStatus.PENDING, LocalDateTime.now()));
